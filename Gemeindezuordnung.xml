@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : Blockzuordnung.xml
+    Created on : 3. Mai 2011, 08:32
+    Author     : mckoch
+    Description:
+        Purpose of the document follows.
+-->
+
+
+<SDAW>
+	<filetype>GEMEINDE_ZUORDNUNG</filetype>
+	<version>1</version>
+	<myversion>0.1</myversion>
+	<description>Gemeindenkennziffern-Zuordnung: Einwohner, Wirtschaftsraum, Klebeblock, PLZ</description>
+	<dataidentifier>LF</dataidentifier>
+	<sdawfieldset>
+	<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+		<field>
+			<title>Bundesland</title>
+			<type>Char</type>
+			
+			<length>3</length>
+			<description>Kürzel für Bundesland</description>
+
+		</field>
+                <field>
+			<title>RGB</title>
+			<type>Float</type>
+
+			<length>3</length>
+			<description>Postleitzahl</description>
+
+		</field>
+                <field>
+			<title>Kreis</title>
+			<type>Char</type>
+
+			<length>5</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>Gemeindekennziffer</title>
+			<type>Char</type>
+
+			<length>8</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>Wirtschaftsraum</title>
+			<type>Char</type>
+
+			<length>50</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>Ort</title>
+			<type>Char</type>
+
+			<length>50</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>Einwohner</title>
+			<type>Float</type>
+
+			<length>8</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>PLZ</title>
+			<type>Char</type>
+
+			<length>5</length>
+			<description>Ort</description>
+
+		</field>
+                <field>
+			<title>Klebeblock</title>
+			<type>Char</type>
+
+			<length>1</length>
+			<description>Ort</description>
+
+		</field>
+
+	</sdawfieldset>
+
+	<keys>
+		<primary>Gemeindekennziffer</primary>
+		<index>PLZ</index>
+                <index>Kreis</index>
+                <index>Wirtschaftsraum</index>
+                <index>Einwohner</index>
+		<!-- <primary>be carefull</primary> -->
+	</keys>
+</SDAW>
+

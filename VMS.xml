@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : VMS.xml
+    Created on : 1. Mai 2011, 18:29
+    Author     : mckoch
+    Description:
+        Purpose of the document follows.
+-->
+
+<SDAW>
+    <filetype>VMS</filetype>
+    <version>VMS Version 004</version>
+    <myversion>SDAW VMS 1</myversion>
+    <description>Stammdaten Verbrauchermarkt-Stammdaten, die von einem Anbieter verwendet
+    werden.(Verbrauchermarkt-Skizzen: siehe Anhang C 14)
+    </description>
+    <dataidentifier>D</dataidentifier>
+    <sdawfieldset>
+	<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+        <field>
+            <title>Verbrauchermarktnummer</title>
+            <type>Char</type>
+            <startpos>21</startpos>
+            <length>15</length>
+            <description>VM-Nr. 21 Num 015 PPP99999999999 Verbrauchermarktnummer</description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>Verbrauchermarktname</title>
+            <type>Char</type>
+            <startpos>36</startpos>
+            <length>20</length>
+            <description>VM Name 36 Char 020 Name</description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>Handelskette</title>
+            <type>Char</type>
+            <startpos>56</startpos>
+            <length>20</length>
+            <description>VM Kette 56 Char 020 Handelskette</description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>Strasse</title>
+            <type>Char</type>
+            <startpos>76</startpos>
+            <length>40</length>
+            <description>VM Straße 76 Char 040 Straße</description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>Quadratmeter</title>
+            <type>Float</type>
+            <startpos>116</startpos>
+            <length>6</length>
+            <description>VM QM 116 Num 006 Größe in QM</description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>StatistischeOrtsKennziffer</title>
+            <type>Char</type>
+            <startpos>130</startpos>
+            <length>8</length>
+            <description>VM Stat.Ortskz. 130 Num 008 Statistische Ortskennziffer des VM (s. Anhang C 09)
+            </description>
+            <valid></valid>
+        </field>
+
+    </sdawfieldset>
+    <uniqueitemid>
+        <index>
+            <name>Verbrauchermarktnummer</name>
+            <type>Char</type>
+            <startpos>21</startpos>
+            <length>15</length>
+            <description>VM-Nr. 21 Num 015 PPP99999999999 Verbrauchermarktnummer</description>
+            <valid></valid>
+        </index>
+    </uniqueitemid>
+
+    <keys>
+        
+        <index>Handelskette</index>
+        <index>StatistischeOrtsKennziffer</index>
+        <index>Verbrauchermarktnummer</index>
+        <index>Verbrauchermarktname</index>
+        <primary>Verbrauchermarktnummer</primary>
+    </keys>
+</SDAW>

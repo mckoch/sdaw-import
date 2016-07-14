@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SDAW>
+    <filetype>FRE</filetype>
+    <version>FRE Version 004</version>
+    <myversion>SDAW FRE 1</myversion>
+    <description>Meldung freier Stellen (FRE)
+Diese Datei wird zur Übermittlung von Freizahlen verwendet..
+    </description>
+    <dataidentifier>D</dataidentifier>
+    <sdawfieldset>
+        
+        <field>
+            <title>Satzart</title>
+            <type>Char</type>
+            <startpos>1</startpos>
+            <length>1</length>
+            <description>Datensatz</description>
+            <valid>D</valid>
+        </field>
+        <field>
+            <title>LogDateikz</title>
+            <type>Char</type>
+            <startpos>2</startpos>
+            <length>19</length>
+            <description>Identifikator fï¿½r log. Datei</description>
+            <valid></valid>
+        </field>
+        <field>
+            <title>Standortnr</title>
+            <type>Char</type>
+            <startpos>21</startpos>
+            <length>13</length>
+            <description>Standortnummer (s. Anhang C 01) P = Pächter 999.. = Eindeutige Standortnummer (s. u.)</description>
+            <valid></valid>
+        </field>        
+        <field>
+            <title>Stellennr</title>
+            <type>Char</type>
+            <startpos>34</startpos>
+            <length>2</length>
+            <description>Nummer der Stelle am Standort</description>
+            <valid></valid>
+        </field>
+        <field>
+            <title>Belegdauerart</title>
+            <type>Char</type>
+            <startpos>36</startpos>
+            <length>3</length>
+            <description></description>
+            <valid></valid>
+        </field>       
+    </sdawfieldset>
+        
+    <uniqueitemid>
+        <index>
+            <name>Standortnr</name>
+            <type>Char</type>
+            <startpos>21</startpos>
+            <length>13</length>
+            <description>Standortnummer (s. Anhang C 01) P = Pächter 999.. = Eindeutige Standortnummer (s. u.)</description>
+        </index>	
+        <index>
+            <name>Stellennr</name>
+            <type>Char</type>
+            <startpos>34</startpos>
+            <length>2</length>
+            <description>Nummer der Stelle am Standort</description>
+        </index>
+        <index>
+            <name>Jahr</name>
+            <type>Char</type>
+            <length>4</length>
+            <description>aktuelles Geschäfsjahr</description>
+        </index> 
+    </uniqueitemid>
+    
+    <groupdelete>
+        <index>
+            <name>Standortnr</name>
+            <type>Char</type>
+            <startpos>21</startpos>
+            <length>13</length>
+            <description>Standortnummer (s. Anhang C 01) P = Pächter 999.. = Eindeutige Standortnummer (s. u.)</description>
+        </index>	
+        <index>
+            <name>Stellennr</name>
+            <type>Char</type>
+            <startpos>34</startpos>
+            <length>2</length>
+            <description>Nummer der Stelle am Standort</description>
+        </index>
+        <index>
+            <name>Jahr</name>
+            <type>Char</type>
+            <length>4</length>
+            <description>aktuelles Geschäftsjahr</description>
+        </index> 
+    </groupdelete>
+    
+    <series> <!-- wird an alle  Datemsätze und Loops angehangen  -->
+        <field>
+            <title>Jahr</title>
+            <type>Char</type>
+            <length>4</length>
+            <description>aktuelles Geschäftsjahr</description>
+        </field> 
+    </series>
+	
+    <keys>
+        <index>Standortnr</index>
+        <index>Belegdauerart</index>
+        <index>Jahr</index>
+        <primary>count</primary>
+    </keys>
+    
+    <loop>
+        <title>_FREIE_TAFELN</title>
+        <startpos>39</startpos>
+        <eodata>Z</eodata>
+        <bodata>A</bodata>
+        <length>1</length>
+        <description>Beginn des Datenloops für freie Stellen FRE</description>
+        <valid>A,Z</valid>  
+        <key>uniqueitemid</key>
+        <keys>
+            <index>Standortnr</index>
+            <index>Jahr</index>
+            <index>Zeitraum</index>
+            <primary>count</primary>
+        </keys>
+        <uniqueitemid>
+            <index>
+                <name>Standortnr</name>
+                <type>Char</type>
+                <startpos>21</startpos>
+                <length>13</length>
+                <description>Standortnummer (s. Anhang C 01) P = Pächter 999.. = Eindeutige Standortnummer (s. u.)</description>
+            </index>	
+            <index>
+                <name>Stellennr</name>
+                <type>Char</type>
+                <startpos>34</startpos>
+                <length>2</length>
+                <description>Nummer der Stelle am Standort</description>
+            </index>
+            <index>
+                <name>Zeitraum</name> 
+                <type>Char</type>
+                <startpos>1</startpos>
+                <length>2</length>
+                <description> Freier Zeitraum 40+ Num 002 01-53 : Bei Wochenklebung (s. Anhang C 12)</description>
+                <valid></valid>
+            </index>
+            <index>
+                <name>Jahr</name>
+                <type>Char</type>
+                <length>4</length>
+                <description>aktuelles Geschäfsjahr</description>
+            </index> 
+        </uniqueitemid>
+        
+        <groupdelete>
+            <index>
+                <name>Standortnr</name>
+                <type>Char</type>
+                <startpos>21</startpos>
+                <length>13</length>
+                <description>Standortnummer (s. Anhang C 01) P = Pächter 999.. = Eindeutige Standortnummer (s. u.)</description>
+            </index>	
+            <index>
+                <name>Stellennr</name>
+                <type>Char</type>
+                <startpos>34</startpos>
+                <length>2</length>
+                <description>Nummer der Stelle am Standort</description>
+            </index>
+            <index>
+                <name>Jahr</name>
+                <type>Char</type>
+                <length>4</length>
+                <description>aktuelles Geschäfsjahr</description>
+            </index> 
+        </groupdelete>
+        
+        <field>
+            <title>Zeitraum</title>
+            <type>Char</type>
+            <startpos>1</startpos>
+            <length>2</length>
+            <description> Freier Zeitraum 40+ Num 002 01-53 : Bei Wochenklebung (s. Anhang C 12)</description>
+            <valid></valid>
+        </field>
+        <field>
+            <title>Rechnungstage</title>
+            <type>Float</type>
+            <startpos>3</startpos>
+            <length>4</length>
+            <description>Tage die in der Rechnung gestellt werden</description>
+            <valid></valid>
+        </field>
+        <field>
+            <title>Tagespreis</title>
+            <type>Float</type>
+            <startpos>7</startpos>
+            <length>7</length>
+            <description>Preis 46+ Num 007 Preis pro Tag/Stelle in Cent</description>
+            <valid></valid>
+        </field>
+        
+    </loop>
+   
+</SDAW>
+<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+<!--       
+        Datensatz (FRE Version 004)
+        Feld Pos. Art Länge Gültige Werte
+        Satzart 1 Char 001 D Datensatz
+        Log.Dateikz 2 Num 019 SSSVVV9999999999999 Identifikator für log. Datei
+        SSS = Senderidentifikation
+        VVV=Version
+        999.. = Eindeutige Ident.nummer
+        Lfd. Standortnr 21 Num 013 PPP9999999999 Standortnummer (s. Anhang C 01)
+        P = Pächter
+        999.. = Eindeutige Standortnummer
+        Stellennr. 34 Num 002 Nummer der Stelle am Standort        
+        Belegdauerart 36 Char 003 W01..W07 Die Belegdauerart muss mit den Angaben
+        D A/D B/D C In den Stammdaten übereinstimmen.
+        Z01..Z14 s. auch Anhang C 06
+        M01..M31
+        Q01..Q03
+        H01..H06
+        J01..J12
+        Beginn Terminteil
+        39 Char 001 A Beginn Termin
+        <field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+        
+        Freier Zeitraum 40+ Num 002 01-53 : Bei Wochenklebung (s. Anhang C 12)
+        01-26 : Bei 14-Tage Klebung
+        01-34 : Bei Dekadenklebung
+        01-12 : Bei Monatsklebung
+        01-04 : Bei Quartalsklebung
+        01-02 : Bei Halbjahresklebung
+        01 : Bei Jahresklebung:
+         <field>
+			<title>FreierZeitraum</title>
+			<type>Char</type>
+			<startpos>40</startpos>
+			<length>2</length>
+			<description> Freier Zeitraum 40+ Num 002 01-53 : Bei Wochenklebung (s. Anhang C 12)</description>
+			<valid></valid>
+		</field>
+        
+        Berechnete Tage 42+ Num 004 Tage die in der Rechnung gestellt werden                
+        Preis 46+ Num 007 Preis pro Tag/Stelle in Cent
+        
+                
+        Ende Terminteil 53+ Char 001 Z Ende Termin
+        <field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+        Beginn Netzteil 54+ Char 001 B Beginn Netzliste
+        <field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+                
+                
+        Filler 55+ Num 006 (früher Netzkzf); Angabe ´000000´ kann
+        entfallen
+        <field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+                
+        Ende Netzteil 61+ Char 001 Y Ende Netzliste
+        <field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+                
+                
+        xxx Satzlänge mindestens = 55
+        Pro Tafel darf nur ein Eintrag vorhanden sein. Ausnahme: bei Wechsel der Belegdauerart bzw. bei Blockwechsel.
+        Freie Termine sollen nur für tatsächlich verfügbare Stellen-Termine gemeldet werden , d.h. ein umbuchbarer Termin
+        darf nicht als frei geliefert werden.
+        Eine in den Freizahlen nicht aufgeführte Stelle ist als komplett belegt / nicht verfügbar zu interpretieren. (D.h. ein
+        ?leer-Satz? soll nicht geliefert werden.)
+        Der Preis darf variiern. Siehe auch Anhang D 04
+-->

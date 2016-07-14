@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Stellenarten>
+	<filetype>Stellenarten</filetype> 
+	<version>Stellenbeschreibungen nach SDAW Version 004</version>
+	<myversion>SDAW Stellenbeschreibungen 001</myversion>
+	<description>Die Objektarten / Stellenarten unterteilen sich in: HS = Hauptstellenart, US = Unterstellenart</description>
+	<dataidentifier>FALSE</dataidentifier>
+	<sdawfieldset>
+	<!-- field template -->
+		<field>
+			<title>HS</title>
+			<type>Char</type>
+			<length>2</length>
+		</field>
+		<field>
+			<title>lang</title>
+			<type>VarChar</type>
+			<length>50</length>
+		</field>
+		<field>
+			<title>kurz</title>
+			<type>Char</type>
+			<length>2</length>
+		</field>
+	</sdawfieldset>
+	<!-- Indexes -->
+	<keys>
+		<index>HS</index>
+		<index>lang</index>
+		<index>kurz</index>
+		<!-- <primary>be carefull</primary> -->
+	</keys>
+	
+	
+	<!-- DATA  -->
+	<HS>
+		<lang>Allgemeiner Anschlag </lang>
+		<kurz>AL</kurz>
+		<US>
+			<lang>Allgemeiner Anschlag Standard </lang>
+			<kurz>ST</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag - U-Bahn </lang>
+			<kurz>BU</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag - S-Bahn </lang>
+			<kurz>BS</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag - Bahn-Sonstige </lang>
+			<kurz>BX</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag - Wartehalle </lang>
+			<kurz>WH</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag – Bahnhof </lang>
+			<kurz>BF</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag – Wechselrahmen </lang>
+			<kurz>WR</kurz> 
+		</US>
+		<US><lang>Allgemeiner Anschlag – Wechselrahmen Rolltreppe </lang>
+			<kurz>AR</kurz> 
+		</US>
+	</HS>
+	
+</Stellenarten>

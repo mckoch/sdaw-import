@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : NielsengebietePLZ.xml
+    Created on : 3. Mai 2011, 08:34
+    Author     : mckoch
+    Description:
+        Purpose of the document follows.
+-->
+
+<SDAW>
+	<filetype>NIELSEN_PlZ</filetype>
+	<version>1</version>
+	<myversion>0.1</myversion>
+	<description>PLZ zu Nielsengebiet</description>
+	<dataidentifier>LF</dataidentifier>
+	<sdawfieldset>
+	<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+		<field>
+			<title>Nielsen</title>
+			<type>Char</type>
+			
+			<length>2</length>
+			<description>Nielsengebiet</description>
+			
+		</field>
+                <field>
+			<title>PLZ</title>
+			<type>Char</type>
+			
+			<length>5</length>
+			<description>Postleitzahl</description>
+			
+		</field>
+                <field>
+			<title>Ort</title>
+			<type>Char</type>
+			
+			<length>50</length>
+			<description>Ort</description>
+			
+		</field>
+
+	</sdawfieldset>
+
+	<keys>
+		<index>Nielsen</index>
+		<primary>PLZ</primary>
+		<!-- <primary>be carefull</primary> -->
+	</keys>
+</SDAW>

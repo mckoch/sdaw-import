@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SDAW>
+	<filetype>STA_DEFAULT</filetype>
+	<version>STA Version 004</version>
+	<myversion>SDAW STA 1</myversion>
+	<description>Stammdaten / Stellenbestand (STA):Enthält Standardauswahl
+        MUSS KONSISTENT MIT STA.XML SEIN!</description>
+	<dataidentifier>D</dataidentifier>
+	<sdawfieldset>
+	<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+		<field>
+			<title>Satzart</title>
+			<type>Char</type>
+			<startpos>1</startpos>
+			<length>1</length>
+			<description>Datensatz</description>
+			<valid>D</valid>
+		</field>
+		<field>
+			<title>LogDateikz</title>
+			<type>Char</type>
+			<startpos>2</startpos>
+			<length>19</length>
+			<description>Identifikator fï¿½r log. Datei</description>
+			<valid></valid>
+		</field>
+		<field>
+			<title>Standortnr</title>
+			<type>Char</type>
+			<startpos>21</startpos>
+			<length>13</length>
+			<description>Standortnummer (s. Anhang C 01) P = Pï¿½chter 999.. = Eindeutige Standortnummer (s. u.)</description>
+			<valid></valid>
+		</field>
+		<field>
+			<title>Preisgruppe</title>
+			<type>Char</type>
+			<startpos>34</startpos>
+			<length>2</length>
+			<description>Preisgruppe (s. Anhang C 03)</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>Stellenart</title>
+			<type>Char</type>
+			<startpos>36</startpos>
+			<length>4</length>
+			<description>siehe Anhang A</description>
+			<!-- add values! -->
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>Beleuchtung</title>
+			<type>Char</type>
+			<startpos>40</startpos>
+			<length>1</length>
+			<description>Beleuchteter Standort (s. Anhang C 05) ï¿½Uï¿½= Unbeleuchtet ï¿½Bï¿½ = Beleuchtet ï¿½Hï¿½ = Hinterleuchtet ï¿½Rï¿½ = Beleuchtet im Rahmen</description>
+			<valid>U,B,H,R</valid>
+		</field>
+
+		<field>
+			<title>AbmessungenH</title>
+			<type>Char</type>
+			<startpos>41</startpos>
+			<length>6</length>
+			<description>Hï¿½he in cm</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>AbmessungenB</title>
+			<type>Char</type>
+			<startpos>47</startpos>
+			<length>6</length>
+			<description>Breite/Umfang in cm</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>Belegdauerart</title>
+			<type>Char</type>
+			<startpos>53</startpos>
+			<length>3</length>
+			<description>W01..W07 W = Woche (s. Anhang C 06)
+D A/D B/D C D = Dekade
+Z01..Z14 Z = 14-Tage
+M01..M31 M = Monat
+Q01..Q03 Q = Quartal
+H01..H06 H = Halbjahr
+J01..J12 J = Jahr</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>AktiverStatus</title>
+			<type>Char</type>
+			<startpos>56</startpos>
+			<length>1</length>
+			<description>A = Aktiv, S = Gesperrt (ï¿½Vï¿½ ist ungï¿½ltig)</description>
+			<valid>A,S</valid>
+		</field>
+
+		<field>
+			<title>GeplanterStatus</title>
+			<type>Char</type>
+			<startpos>57</startpos>
+			<length>1</length>
+			<description>A = Aktiv, S = Gesperrt (ï¿½Vï¿½ ist ungï¿½ltig)</description>
+			<valid>A,S</valid>
+		</field>
+
+		<field>
+			<title>Statuswechsel</title>
+			<type>Char</type>
+			<startpos>58</startpos>
+			<length>2</length>
+			<description>Ab Zeitraum (1-53 ...) (s.u.) muss ungleich Null sein, wenn ï¿½Aktiver Statusï¿½ ungleich ï¿½Geplanter Statusï¿½</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>StatOrtskz</title>
+			<type>Char</type>
+			<startpos>60</startpos>
+			<length>8</length>
+			<description>Statistische Ortskennziffer</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>Ortsteil</title>
+			<type>Char</type>
+			<startpos>68</startpos>
+			<length>30</length>
+			<description>Ortsteil</description>
+			<valid></valid>
+		</field>
+
+		<field>
+			<title>Planquadrat</title>
+			<type>Char</type>
+			<startpos>98</startpos>
+			<length>6</length>
+			<description>Planquadrat</description>
+			<valid></valid>
+		</field>
+
+                <field>
+			<title>Fotoname</title>
+			<type>Char</type>
+			<startpos>124</startpos>
+			<length>8</length>
+			<description>Fotoname ohne Endung (jpg!)</description>
+			<valid></valid>
+		</field>
+
+                 <field>
+			<title>PLZ</title>
+			<type>Char</type>
+			<startpos>137</startpos>
+			<length>5</length>
+			<description>Posteitzahl</description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>Standortbezeichnung</title>
+			<type>Char</type>
+			<startpos>142</startpos>
+			<length>80</length>
+			<description>Breitengrad</description>
+			<valid></valid>
+		</field>
+
+                <field>
+			<title>Stellennummer</title>
+			<type>Char</type>
+			<startpos>254</startpos>
+			<length>2</length>
+			<description>Tafelnummer am Standort (s.Anhang C 01)</description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>Verbrauchermarktnummer</title>
+			<type>Char</type>
+			<startpos>396</startpos>
+			<length>15</length>
+			<description>VM-Nr. 396 Num 015 PPP999999999999 Verbrauchermarktnummer</description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>Preis</title>
+			<type>Float</type>
+			<startpos>411</startpos>
+			<length>7</length>
+			<description>Preis 411 Num 007 Preis pro Tag/Stelle in Cent (s. Anhang D 04)</description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>Leistungsklasse1</title>
+			<type>Char</type>
+			<startpos>426</startpos>
+			<length>2</length>
+			<description>Leistungsklasse1 426 Char 002 GFK-Klasse</description>
+			<valid></valid>
+		</field>
+
+                <field>
+			<title>Leistungswert1</title>
+			<type>Float</type>
+			<startpos>428</startpos>
+			<length>5</length>
+			<description>Leistungswert1 428 Num 005 G-Wert, G-Wert2,Oskar-,Contur-,
+                        oder Individual-Wert
+                        </description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>Bauart</title>
+			<type>Char</type>
+			<startpos>464</startpos>
+			<length>2</length>
+			<description>Bauart 464 Char 002 ? ?=Normal, ?MD?=Mobildisplay,?PW?=Wendeanlage,
+                        ?SL?=Säule,?FL=Fläche?,?SI?=Stadtinfo.anlage, ?WX?= Wechsler,?MF?= GF mit Monofuß,
+                        ?HS?=Halbsäule
+                        </description>
+			<valid></valid>
+		</field>
+
+                <field>
+			<title>longitude</title>
+			<type>Float</type>
+			<startpos>466</startpos>
+			<length>15</length>
+			<description>Längengrad</description>
+			<valid></valid>
+		</field>
+                <field>
+			<title>latitude</title>
+			<type>Float</type>
+			<startpos>481</startpos>
+			<length>15</length>
+			<description>Breitengrad</description>
+			<valid></valid>
+		</field>
+
+	</sdawfieldset>
+
+	<keys>
+		<index>Standortnr</index>
+		<index>Stellenart</index>
+		<index>AktiverStatus</index>
+		<primary>count</primary>
+	</keys>
+</SDAW>

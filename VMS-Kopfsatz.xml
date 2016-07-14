@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : SdawKopfsaetze.xml
+    Created on : 9. Juni 2011, 12:48
+    Author     : mckoch
+    Description:
+        Purpose of the document follows.
+-->
+<SDAW>
+    <filetype>VMSKOPFSAETZE</filetype>
+    <version>VMS Version 004</version>
+    <myversion>SDAW 1</myversion>
+    <description>Kopfdaten der eingepflegten VMS-Dateien (Verbrauchermart-Stammdaten
+    </description>
+    <dataidentifier>K</dataidentifier>
+<!--    <mode>REPLACE</mode>-->
+    <sdawfieldset>
+	<!-- field template
+		<field>
+			<title></title>
+			<type></type>
+			<startpos></startpos>
+			<length></length>
+			<description></description>
+			<valid></valid>
+		</field>
+	-->
+        <!--
+        Stammdaten / Verbrauchermarkt (VMS)
+            Diese Datei wird verwendet zur Meldung von Verbrauchermarkt-Stammdaten, 
+            die von einem Anbieter verwendet werden.
+            (Verbrauchermarkt-Skizzen: siehe Anhang C 14)
+            Kopfsatz (VMS Version 004)
+            Feld Pos. Art Länge Gültige Werte
+            Satzart 1 Char 001 K Kopfsatz
+            Dateiart 2 Char 003 VMS VMS - Stammdatem / Verbrauchermarkt
+            GJ 5 Num 004 gültiges Geschäftsjahr
+            Log.Dateikz 9 Num 019 SSSVVV9999999999999 Identifikator für log. Datei
+            SSS = Senderidentifikation,
+            VVV=Version
+            999.. = Eindeutige Ident.nummer
+            Datum 28 Num 008 DDMMJJJJ Dateierstellungsdatum
+            xxx Satzlänge = 35
+        -->
+        
+        <field>
+            <title>Datum</title>
+            <type>Char</type>
+            <startpos>28</startpos>
+            <length>8</length>
+            <description>Dateierstellungsdatum</description>
+            <valid></valid>
+        </field>
+        
+        <field>
+            <title>Dateiart</title>
+            <type>Char</type>
+            <startpos>2</startpos>
+            <length>3</length>
+            <description>
+                Art der eingelesenen Datei (VMS)
+            </description>
+            <valid>FRE</valid>
+        </field>
+
+        <field>
+            <title>Jahr</title>
+            <type>Char</type>
+            <startpos>5</startpos>
+            <length>4</length>
+            <description>
+                aktuelles Geschäfsjahr
+            </description>
+            <valid></valid>
+        </field>
+
+        <field>
+            <title>LogDateiKennZiffer</title>
+            <type>Char</type>
+            <startpos>9</startpos>
+            <length>19</length>
+            <description>
+                Log Datei-Kennung des Senders
+            </description>
+            <valid></valid>
+        </field>
+
+    </sdawfieldset>
+
+    <keys>
+        <index>Dateiart</index>
+        <index>Jahr</index>
+        <index>Datum</index>
+        <primary>LogDateiKennZiffer</primary>
+	<!-- <primary>be carefull</primary> -->
+    </keys>
+</SDAW>
